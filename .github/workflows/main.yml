@@ -22,11 +22,8 @@ jobs:
       - name: Build
         run: mvn clean package -B
 
-      - name: Rename JAR
-        run: mv target/Shard-Ruby.jar Shard-Ruby.jar
-
       - name: Upload Shard-Ruby.jar
         uses: actions/upload-artifact@v4
         with:
           name: Shard-Ruby
-          path: Shard-Ruby.jar
+          path: target/Shard-Ruby.jar
